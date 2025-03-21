@@ -48,6 +48,7 @@ main() {
   # not update when only our patch files change, and that will cause caching
   # issues where the browser keeps using outdated code.
   export BUILD_SOURCEVERSION
+  export VERSION="4.98.3"
   BUILD_SOURCEVERSION=$(git rev-parse HEAD)
 
   pushd lib/vscode
