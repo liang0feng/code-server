@@ -66,14 +66,14 @@ main() {
   #
   # This needs to be done before building as Code will read this file and embed
   # it into the client-side code.
-  echo "hello world!!!!!"
+  echo "hello world!!!!!1"
   pwd
-  tree .
   # git checkout product.json             # Reset in case the script exited early.
   cd ..
   git clone https://github.com/microsoft/vscode.git
-  tree .
+  tree -L 3 .
   cp product.json product.original.json # Since jq has no inline edit.
+  echo "hello world!!!!!2"
   jq --slurp '.[0] * .[1]' product.original.json <(
     cat << EOF
   {
@@ -115,6 +115,8 @@ main() {
 EOF
   ) > product.json
 
+  echo "hello world!!!!!3"
+
   # Any platform here works since we will do our own packaging.  We have to do
   # this because we have an NPM package that could be installed on any platform.
   # The correct platform dependencies and scripts will be installed as part of
@@ -125,9 +127,10 @@ EOF
   # commit (the dev client will use `oss-dev` but the dev server will still use
   # product.json which will have `stable-$commit`).
   git checkout product.json
-
+  echo "hello world!!!!!4"
   popd
 
+  echo "hello world!!!!!5"
   pushd lib/vscode-reh-web-linux-x64
   # Make sure Code took the version we set in the environment variable.  Not
   # having a version will break display languages.
@@ -136,7 +139,7 @@ EOF
     exit 1
   fi
   popd
-
+  echo "hello world!!!!!6"
   # These provide a `code-server` command in the integrated terminal to open
   # files in the current instance.
   delete-bin-script remote-cli/code-server
