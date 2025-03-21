@@ -68,8 +68,11 @@ main() {
   # it into the client-side code.
   echo "hello world!!!!!1"
   pwd
+  cd ..
   # git checkout product.json             # Reset in case the script exited early.
-  git clone https://github.com/microsoft/vscode.git ./../
+  git clone https://github.com/microsoft/vscode.git
+  
+  cd vscode
   tree -L 1 .
   cp product.json product.original.json # Since jq has no inline edit.
   echo "hello world!!!!!2"
