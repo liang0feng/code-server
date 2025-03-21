@@ -116,7 +116,7 @@ main() {
   }
 EOF
   ) > product.json
-
+  npm update
   npm install gulp --save-dev
   echo "hello world!!!!!3"
 
