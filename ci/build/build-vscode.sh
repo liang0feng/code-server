@@ -69,7 +69,9 @@ main() {
   echo "hello world!!!!!"
   pwd
   tree .
-  git checkout product.json             # Reset in case the script exited early.
+  # git checkout product.json             # Reset in case the script exited early.
+  git clone https://github.com/microsoft/vscode.git
+  tree .
   cp product.json product.original.json # Since jq has no inline edit.
   jq --slurp '.[0] * .[1]' product.original.json <(
     cat << EOF
