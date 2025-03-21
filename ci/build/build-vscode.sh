@@ -71,7 +71,7 @@ main() {
   # git checkout product.json             # Reset in case the script exited early.
   cd ..
   git clone https://github.com/microsoft/vscode.git
-  tree -L 3 .
+  ll
   cp product.json product.original.json # Since jq has no inline edit.
   echo "hello world!!!!!2"
   jq --slurp '.[0] * .[1]' product.original.json <(
