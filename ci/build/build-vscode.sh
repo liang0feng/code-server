@@ -69,7 +69,7 @@ main() {
   echo "hello world!!!!!1"
   pwd
   # git checkout product.json             # Reset in case the script exited early.
-  git clone https://github.com/microsoft/vscode.git ../
+  git clone https://github.com/microsoft/vscode.git ./../
   tree -L 1 .
   cp product.json product.original.json # Since jq has no inline edit.
   echo "hello world!!!!!2"
