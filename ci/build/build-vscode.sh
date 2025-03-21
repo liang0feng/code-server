@@ -66,6 +66,7 @@ main() {
   #
   # This needs to be done before building as Code will read this file and embed
   # it into the client-side code.
+  tree .
   git checkout product.json             # Reset in case the script exited early.
   cp product.json product.original.json # Since jq has no inline edit.
   jq --slurp '.[0] * .[1]' product.original.json <(
