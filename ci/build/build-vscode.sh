@@ -117,6 +117,7 @@ main() {
 EOF
   ) > product.json
 
+  npm install gulp --save-dev
   echo "hello world!!!!!3"
 
   # Any platform here works since we will do our own packaging.  We have to do
@@ -131,7 +132,7 @@ EOF
   git checkout product.json
   echo "hello world!!!!!4"
   popd
-
+  
   echo "hello world!!!!!5"
   pushd lib/vscode-reh-web-linux-x64
   # Make sure Code took the version we set in the environment variable.  Not
