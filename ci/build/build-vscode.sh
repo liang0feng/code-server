@@ -116,7 +116,9 @@ main() {
   }
 EOF
   ) > product.json
-  npm compile
+
+  npm run preinstall
+  npm run compile
   echo "hello world!!!!!3"
 
   # Any platform here works since we will do our own packaging.  We have to do
