@@ -116,8 +116,7 @@ main() {
   }
 EOF
   ) > product.json
-  npm update
-  npm install gulp --save-dev
+  
   echo "hello world!!!!!3"
 
   # Any platform here works since we will do our own packaging.  We have to do
