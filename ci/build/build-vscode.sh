@@ -117,9 +117,8 @@ main() {
 EOF
   ) > product.json
 
-  npm run preinstall
-  npm run postinstall
   echo "hello world!!!!!3"
+  npm install
 
   # Any platform here works since we will do our own packaging.  We have to do
   # this because we have an NPM package that could be installed on any platform.
